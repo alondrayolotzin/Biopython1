@@ -1,0 +1,31 @@
+# T7. Repaso de Programación Orientada a Objetos
+
+class Animal:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def haz_ruido(self):
+        return "Sonido de animal"
+
+class Perro(Animal):
+    def haz_ruido(self):
+        return "Guau"
+
+class Gato(Animal):
+    def __init__(self, nombre, edad, usa_arenero=True):
+        super().__init__(nombre, edad)
+        self.usa_arenero = usa_arenero
+
+    def haz_ruido(self):
+        return "Miau"
+
+perro = Perro("loqui", 2)
+gato = Gato("coco", 3)
+
+
+print(perro.haz_ruido())  
+print(gato.haz_ruido())   
+
+print(perro.__dict__)  
+print(gato.__dict__)   
